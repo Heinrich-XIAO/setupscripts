@@ -1,7 +1,7 @@
 #/bin/sh
 
 # Fedora Specific
-sudo dnf install zsh cargo python3 python-is-python3 git gh pip alacritty flatpak gnome-tweaks vim neovim zoxide
+sudo dnf install zsh cargo python3 python-is-python3 git gh pip alacritty flatpak gnome-tweaks vim neovim zoxide cmake
 
 if [ "$(uname -m)" = "aarch64" ]; then
     # If true, run the installation command with sudo
