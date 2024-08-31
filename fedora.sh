@@ -1,7 +1,7 @@
 #/bin/sh
 
 # Fedora Specific
-sudo dnf install -y zsh cargo python3 python-is-python3 git gh pip alacritty flatpak gnome-tweaks vim neovim zoxide cmake clang luarocks fastfetch hyprland strawberry waybar thunderbird fcitx5 lz4-devel NetworkManager-tui pavucontrol
+sudo dnf install -y zsh cargo python3 python-is-python3 git gh pip alacritty flatpak gnome-tweaks vim neovim zoxide cmake clang luarocks fastfetch hyprland strawberry waybar thunderbird fcitx5 lz4-devel NetworkManager-tui pavucontrol input-remapper
 
 sudo dnf -y copr enable erikreider/SwayNotificationCenter
 sudo dnf -y install SwayNotificationCenter
@@ -50,3 +50,20 @@ cd swww
 cargo build --release
 
 cd ~
+
+sudo tee /etc/systemd/system/input-remapper.service > /dev/null << EOF
+[Unit]
+Description=Input Remapper 
+After=graphical.target
+
+[Service]
+ExecStart=/usr/local/bin/input-remapper.sh
+Type=oneshot
+RemainAfterExit=true
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl enable input-remapper
