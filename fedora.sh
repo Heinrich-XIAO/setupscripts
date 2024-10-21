@@ -1,7 +1,7 @@
 #/bin/sh
 
 # Fedora Specific
-sudo dnf install -y zsh cargo python3 python-is-python3 git gh pip alacritty flatpak gnome-tweaks vim neovim zoxide cmake clang luarocks fastfetch hyprland strawberry waybar thunderbird fcitx5 lz4-devel NetworkManager-tui pavucontrol input-remapper
+sudo dnf install -y zsh cargo python3 python-is-python3 git gh pip alacritty flatpak gnome-tweaks vim neovim zoxide cmake clang luarocks fastfetch hyprland strawberry waybar thunderbird fcitx5 lz4-devel NetworkManager-tui pavucontrol input-remapper steam
 
 sudo dnf -y copr enable erikreider/SwayNotificationCenter
 sudo dnf -y install SwayNotificationCenter
