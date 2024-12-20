@@ -8,6 +8,8 @@ sudo dnf -y copr enable erikreider/SwayNotificationCenter
 sudo dnf -y install SwayNotificationCenter
 
 
+sudo dnf copr enable sneexy/zen-browser -y
+sudo dnf -y install zen-browser-avx2 
 
 if [ "$(uname -m)" = "aarch64" ]; then
     # If true, run the installation command with sudo
@@ -50,6 +52,13 @@ cd Downloads
 git clone https://github.com/LGFae/swww.git
 cd swww
 cargo build --release
+
+
+cd ..
+
+wget -c "https://github.com/Milkshiift/GoofCord/releases/download/v1.8.1/GoofCord-1.8.1-linux-x86_64.rpm"
+sudo rpm -i "GoofCord-1.8.1-linux-x86_64.rpm"
+
 
 cd ~
 
