@@ -51,6 +51,17 @@ cargo build --release
 
 cd ~
 
+sudo tee /usr/local/bin/input-remapper.sh > /dev/null << EOF
+#!/bin/bash
+sudo pkill -f input-remapper-service
+sudo input-remapper-service -d &
+sleep 2
+input-remapper-control --command autoload
+EOF
+sudo chmod +x /usr/local/bin/input-remapper.sh
+
+
+
 sudo tee /etc/systemd/system/input-remapper.service > /dev/null << EOF
 [Unit]
 Description=Input Remapper 
