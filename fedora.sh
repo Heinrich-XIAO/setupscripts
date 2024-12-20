@@ -9,7 +9,7 @@ sudo dnf -y install SwayNotificationCenter
 
 
 sudo dnf copr enable sneexy/zen-browser -y
-sudo dnf -y install zen-browser-avx2 
+sudo dnf -y install zen-browser
 
 if [ "$(uname -m)" = "aarch64" ]; then
     # If true, run the installation command with sudo
