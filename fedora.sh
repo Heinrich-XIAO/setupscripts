@@ -16,7 +16,6 @@ pip install spotdl
 pip install pipx
 cargo install bottom
 cargo install wallust
-flatpak install flathub com.ticktick.TickTick -y
 flatpak install flathub dev.vencord.Vesktop -y
 flatpak install flathub com.mattjakeman.ExtensionManager -y
 flatpak install flathub org.strawberrymusicplayer.strawberry -y
