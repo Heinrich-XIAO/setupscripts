@@ -16,10 +16,10 @@ pip install spotdl
 pip install pipx
 cargo install bottom
 cargo install wallust
-flatpak install flathub com.ticktick.TickTick
-flatpak install flathub dev.vencord.Vesktop
-flatpak install flathub com.mattjakeman.ExtensionManager
-flatpak install flathub org.strawberrymusicplayer.strawberry
+flatpak install flathub com.ticktick.TickTick -y
+flatpak install flathub dev.vencord.Vesktop -y
+flatpak install flathub com.mattjakeman.ExtensionManager -y
+flatpak install flathub org.strawberrymusicplayer.strawberry -y
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
