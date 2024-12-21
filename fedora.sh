@@ -25,6 +25,7 @@ cargo install bottom
 cargo install wallust
 flatpak install flathub dev.vencord.Vesktop -y
 flatpak install flathub com.mattjakeman.ExtensionManager -y
+flatpak install flathub org.kde.kwalletmanager5 -y
 flatpak install flathub org.strawberrymusicplayer.strawberry -y
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
