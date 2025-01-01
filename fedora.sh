@@ -12,6 +12,11 @@ sudo dnf -y install SwayNotificationCenter
 sudo dnf copr enable sneexy/zen-browser -y
 sudo dnf -y install zen-browser
 
+sudo dnf -y install dnf-plugins-core
+sudo dnf-3 config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl enable --now docker
+
 if [ "$(uname -m)" = "aarch64" ]; then
     # If true, run the installation command with sudo
     sudo dnf install asahi-bless
@@ -77,7 +82,7 @@ sudo chmod +x /usr/local/bin/input-remapper.sh
 
 sudo tee /etc/systemd/system/input-remapper.service > /dev/null << EOF
 [Unit]
-Description=Input Remapper 
+Description=Input Remapper
 After=graphical.target
 
 [Service]
@@ -91,3 +96,5 @@ StandardError=journal
 WantedBy=multi-user.target
 EOF
 sudo systemctl enable input-remapper
+
+sudo npm install --global web-ext
